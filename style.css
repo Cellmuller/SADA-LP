@@ -5,6 +5,9 @@
     letter-spacing: 3px;
     font-family: 'Noto Sans JP', sans-serif;
 }
+body{
+    overflow-x:hidden ;
+}
 /* fv-area */
 .fv-area {
     position: relative;
@@ -72,6 +75,7 @@
     line-height: 2;
     font-size: 18px;
     font-weight: bold;
+    width: 50%;
 }
 .concept-img-2{
     position: absolute;
@@ -150,10 +154,24 @@
 /* price-area */
 .price-area{
     padding: 100px 30px;
+    background-image: url(./images/price-area-bg-img.png);
+    background-position: left center;
+    background-repeat: repeat-x;
+    background-size: auto; /* 必要に応じてサイズを調整してください */
+    animation: slide 20s linear infinite; /* 20秒ごとに画像を横に流れるアニメーション */
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
 }
 .price-area > div{
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
 }
 .price-area > div span{
@@ -181,7 +199,7 @@
     background-size: cover;
     padding: 80px 0 500px;
     color: #fff;
-    font-size: 28px;
+    font-size: 48px;
 }
 .reason-area h2 span{
     display: block;
@@ -214,12 +232,12 @@
 }
 .reason-area .flex > div > .title{
     text-align: center;
-    margin: 15px 0 0;
+    margin: 20px 0 0;
     padding-bottom: 15px;
     font-size: 18px;
     color: #256FA7;
     font-weight: bold;
-    border-bottom: 1px solid #256FA7;
+    border-bottom: 2px solid #63A7DC;
 }
 .reason-area .flex > div > p{
     padding: 15px 0;
@@ -391,16 +409,23 @@
     margin-top: 70px;
     text-align: center;
 }
-.celebrity-area > .provider h3{
+.celebrity-area > .provider h3 {
     text-align: center;
     margin-bottom: 70px;
     position: relative;
     display: inline-block;
+    font-size: 18px;
 }
 
 
-.celebrity-area > .provider img{
+
+.celebrity-area > .provider .provider-img{
     display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.celebrity-area > .provider .provider-img-sp{
+    display: none;
     width: 60%;
     margin: 0 auto;
 }
@@ -409,11 +434,11 @@
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
     padding: 35px;
-    position:sticky; /* 追加 */
-    bottom: 0;       /* 追加 */
-    left: 0;         /* ウィンドウの左端に寄せる場合 */
-    right: 0;        /* ウィンドウの右端に寄せる場合 */
-    z-index: 1000;   /* 必要に応じて他の要素より前に表示 */
+    position:sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .fixed-area a{
@@ -470,7 +495,8 @@ footer > small{
 }
 @media screen and (max-width:768px) {
     .fv-area .logo {
-        width: 25%;
+        width: 45%;
+        top: 0px;
     }
     .fv-area .fv-img{
         display: none;
@@ -493,10 +519,17 @@ footer > small{
         margin-left: 0;
         display: none;
     }
+    .concept-area .flex > div:nth-child(2) {
+        padding: 0 30px;
+    }
+    .concept-area .flex > div:nth-child(2) h2 {
+        width: 100%;
+    }
     .concept-area .flex > div:nth-child(2) p {
         line-height: 2;
         font-size: 16px;
         font-weight: bold;
+        width: 100%;
     }
     
     .concept-img-2 {
@@ -592,8 +625,13 @@ footer > small{
         width: 90%;
         margin: 0 auto;
     }
-    .celebrity-area > .provider img {
-        width: 75%;
+    .celebrity-area > .provider .provider-img{
+        display: none;
+    }
+    .celebrity-area > .provider .provider-img-sp{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
     }
     .fixed-area{
         padding: 30px;
@@ -606,9 +644,6 @@ footer > small{
     }
 }
 @media screen and (max-width:430px){
-    .fv-area .logo {
-        width: 30%;
-    }
     .concept-area {
         padding: 30px 0px;
     }
@@ -622,14 +657,14 @@ footer > small{
         padding: 50px 15px;
     }
     .price-area > div {
-        font-size: 20px;
+        font-size: 26px;
     }
     .reason-area h2 span {
         width: 80%;
         margin: 0 auto 10px;
     }
     .reason-area .flex {
-        top: 8%;
+        top: 9%;
     }
     .reason-area .flex > div {
         margin: 0 0px 35px;
