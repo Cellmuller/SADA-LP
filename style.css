@@ -5,9 +5,6 @@
     letter-spacing: 3px;
     font-family: 'Noto Sans JP', sans-serif;
 }
-body{
-    overflow-x: hidden;
-}
 /* fv-area */
 .fv-area {
     position: relative;
@@ -482,6 +479,15 @@ footer > small{
         flex: 1 0 auto;
         max-width: 100%;
         padding: 25px 0 0 ;
+    }
+    .trouble-area > .flex > div:first-child{
+        background-color: #63A7DC;
+    }
+    .trouble-area > .flex > div:nth-child(2){
+        background-color: #B488BB;
+    }
+    .trouble-area > .flex > div:nth-child(3){
+        background-color: #F8B300;
     }
     
     .trouble-area > .flex > div > .title {
