@@ -59,33 +59,42 @@ $(function () {
   });
 
   // Strengthsエリアのアニメーション設定
-  $(window).on("scroll", function () {
+  $(document).ready(function () {
     $(".strengths-area > .flex > div:nth-child(2) img").each(function (
       index,
       element
     ) {
+      gsap.set(element, { opacity: 0, x: "100%" });
+    });
+
+    $(window).on("scroll", function () {
       var offset, duration;
 
-      if ($(window).width() <= 750) {
-        offset = -100; // オフセットを0に設定
-        duration = 0.5; // アニメーションの持続時間を短く設定
+      if ($(window).width() <= 768) {
+        offset = -100;
+        duration = 0.5;
       } else {
-        offset = 200; // オフセットを200に設定
-        duration = 1; // アニメーションの持続時間を1秒に設定
+        offset = 200;
+        duration = 1;
       }
 
-      var elementTop = $(element).offset().top + offset;
-      var viewportBottom = $(window).scrollTop() + $(window).height();
+      $(".strengths-area > .flex > div:nth-child(2) img").each(function (
+        index,
+        element
+      ) {
+        var elementTop = $(element).offset().top + offset;
+        var viewportBottom = $(window).scrollTop() + $(window).height();
 
-      if (elementTop < viewportBottom && !$(element).hasClass("animated")) {
-        gsap.to(element, {
-          duration: duration, // ここで持続時間を使用
-          opacity: 1,
-          x: "0%", // 元の位置に戻す
-          ease: "power4.out",
-        });
-        $(element).addClass("animated");
-      }
+        if (elementTop < viewportBottom && !$(element).hasClass("animated")) {
+          gsap.to(element, {
+            duration: duration,
+            opacity: 1,
+            x: "0%",
+            ease: "power4.out",
+          });
+          $(element).addClass("animated");
+        }
+      });
     });
   });
 });
