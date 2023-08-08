@@ -595,6 +595,12 @@ footer > small{
     .celebrity-area > .provider img {
         width: 75%;
     }
+    .fixed-area{
+        padding: 30px;
+    }
+    .fixed-area a img {
+        width: 6.5%;
+    }
     footer > div img {
         width: 30%;
     }
