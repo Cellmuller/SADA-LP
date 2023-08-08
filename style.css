@@ -1,0 +1,618 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/* fv-area */
+.fv-area {
+    position: relative;
+}
+.fv-area  .logo{
+    display: block;
+    width: 15%;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+.fv-area .fv-img{
+    display: block;
+    width: 100%;
+}
+.fv-area .fv-img-sp{
+    display: none;
+    width: 100%;
+}
+
+/* concept-area */
+.concept-area{
+    padding: 150px 30px 100px;
+    position: relative;
+}
+.concept-area .flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.concept-area .flex > div:first-child{
+    flex: 40%;
+}
+.concept-area .flex > div:nth-child(2){
+    flex: 60%;
+    padding: 0 75px;
+}
+.concept-area .flex > div:first-child > img{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+}
+.concept-area .flex > div:nth-child(2) h2{
+    margin-bottom: 100px;
+    font-size: 32px;
+    position: relative;
+}
+.concept-area .flex > div:nth-child(2) h2 span{
+    display: block;
+    font-size: 16px;
+    color: #63A7DC;
+    margin-bottom: 50px;
+}
+.concept-area .flex > div:nth-child(2) h2::after{
+    content: "";
+    display: block;
+    width: 5%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+.concept-area .flex > div:nth-child(2) p{
+    line-height: 2;
+    font-size: 18px;
+    font-weight: bold;
+}
+.concept-img-2{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 15%;
+    opacity: 0;
+    transform: translateX(100px);
+}
+.concept-img-3{
+    position: absolute;
+    top: 60%;
+    right: 0;
+    width: 20%;
+    opacity: 0;
+    transform: translateX(100px);
+}
+/* trouble-area */
+.trouble-area > .flex{
+    display: flex;
+}
+.trouble-area > .flex > div{
+    flex: calc(100%/3);
+    background-color: #E4E4E3;
+    padding: 25px 0;
+    position: relative;
+    transition: all .2s;
+}
+.trouble-area > .flex > div:not(:last-child){
+    border-right: 2px solid #fff;
+}
+.trouble-area > .flex > div:first-child:hover{
+    background-color: #63A7DC;
+}
+.trouble-area > .flex > div:nth-child(2):hover{
+    background-color: #B488BB;
+}
+.trouble-area > .flex > div:nth-child(3):hover{
+    background-color: #F8B300;
+}
+.trouble-area > .flex > div > .trouble-img{
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.trouble-area > .flex > div > .title{
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+.trouble-area > .flex > div > .desc {
+    position: absolute;
+    bottom: 0;
+    right: -80%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    color: #fff;
+    padding: 35px 25px;
+    width: 80%;
+    line-height: 2;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.5s ease;
+}
+
+.trouble-area > .flex > div:hover > .desc {
+    right: 0;
+}
+
+/* price-area */
+.price-area{
+    padding: 100px 30px;
+}
+.price-area > div{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.price-area > div span{
+    color: #63A7DC;
+}
+.price-area > p{
+    text-align: center;
+    margin: 30px 0 50px;
+    font-weight: bold;
+}
+.price-area > img{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+/* reason-area */
+.reason-area{
+    position: relative;
+    background-color: #E4E4E3;
+}
+.reason-area h2{
+    text-align: center;
+    background-image: url(./images/reason-area-bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0 500px;
+    color: #fff;
+    font-size: 28px;
+}
+.reason-area h2 span{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.reason-area .flex{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 10;
+}
+.reason-area .flex > div{
+    flex: calc(100%/3);
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #d2d2d2;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all .1s;
+}
+.reason-area .flex > div > .reason-img{
+    display: block;
+    width: 100%;
+}
+.reason-area .flex > div > .title{
+    text-align: center;
+    margin: 15px 0 0;
+    padding-bottom: 15px;
+    font-size: 18px;
+    color: #256FA7;
+    font-weight: bold;
+    border-bottom: 1px solid #256FA7;
+}
+.reason-area .flex > div > p{
+    padding: 15px 0;
+    line-height: 2;
+    font-weight: bold;
+}
+/* strengths-area{ */
+.strengths-area{
+    padding: 350px 0px;
+    background-color: #E4E4E3;
+    position: relative;
+}
+.strengths-area > .flex{
+    display: flex;
+}
+.strengths-area > .flex > div:first-child{
+    flex: 45%;
+}
+.strengths-area > .flex > div:first-child h2{
+    margin-bottom: 100px;
+    font-size: 32px;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+}
+.strengths-area > .flex > div:first-child h2 span{
+    display: block;
+    font-size: 16px;
+    color: #63A7DC;
+    margin-bottom: 50px;
+}
+.strengths-area > .flex > div:first-child h2::after{
+    content: "";
+    display: block;
+    width: 5%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+.strengths-area > .flex > div:first-child p{
+    width: 80%;
+    margin-top: 100px;
+    margin-left: auto;
+    line-height: 2;
+    font-weight: bold;
+}
+.strengths-area > .flex > div:first-child p span{
+    display: block;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+.strengths-area > .flex > div:nth-child(2){
+    flex: 55%;
+}
+.strengths-area > .flex > div:nth-child(2) img{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    transform: translateX(100%);
+    opacity: 0;
+}
+.step{
+    background-color: #fff;
+    width: 80%;
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+.step > h3{
+    text-align: center;
+}
+.step > span {
+    display: inline-block;
+    margin: 20px 0;
+    color: #256FA7;
+    font-weight: bold;
+    position: relative;
+}
+
+.step > span::before,
+.step > span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    border-bottom: 1px solid;
+}
+
+.step > span::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.step > span::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.step > span > span{
+    font-size: 28px;
+}
+.step > .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.step > .flex > div{
+    flex: calc(100%/5);
+    padding: 15px;
+    position: relative;
+}
+.step > .flex > div > .num{
+    width: 50px;
+    height: 50px;
+    background-color: #63A7DC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: -25px;
+    left: -10px;
+}
+.step > .flex > div > .step-img{
+    display: block;
+    width: 100%;
+}
+.step > .flex > div > div{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* celebrity-area */
+.celebrity-area{
+    padding: 350px 0 100px;
+}
+.celebrity-area > h2{
+    margin-bottom: 70px;
+    font-size: 32px;
+    position: relative;
+    text-align: center;
+}
+.celebrity-area > h2 span{
+    display: block;
+    font-size: 16px;
+    color: #63A7DC;
+    margin-bottom: 50px;
+}
+.celebrity-area > p{
+    text-align: center;
+    font-weight: bold;
+}
+.celebrity-area > .slider{
+    margin-top: 70px;
+}
+.celebrity-area > .slider .slider-img{
+    margin: 0 !important;
+    width: 90%;
+}
+.celebrity-area > .provider{
+    margin-top: 70px;
+    text-align: center;
+}
+.celebrity-area > .provider h3{
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.celebrity-area > .provider img{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+/* footer */
+footer > div{
+    background-color: #E4E4E3;
+    padding: 35px;
+    text-align: center ;
+}
+footer > div img{
+    display: block;
+    width: 15%;
+    margin: 0 auto 25px;
+}
+footer > div > p {
+    font-weight: bold;
+    font-size: 14px;
+}
+footer > div > p > span:nth-of-type(1){
+    color: #006DB9;
+    text-decoration: underline;
+    font-size: 18px;
+}
+footer > div > p > span:nth-of-type(2){
+    color: #774993;
+    text-decoration: underline;
+    font-size: 18px;
+}
+footer > small{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: #707070;
+    font-size: 12px;
+}
+@media screen and (max-width:768px) {
+    .fv-area .logo {
+        width: 25%;
+    }
+    .fv-area .fv-img{
+        display: none;
+    }
+    .fv-area .fv-img-sp{
+        display: block;
+    }
+    .concept-area {
+        padding: 50px 0px ;
+    }
+    .concept-area .flex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .concept-area .flex > div:first-child {
+        margin-top: 35px;
+    }
+    .concept-area .flex > div:first-child > img {
+        width: 50%;
+        margin-left: 0;
+        display: none;
+    }
+    
+    .concept-img-2 {
+        display: none;
+    }
+    .concept-img-3 {
+        display: none;
+    }
+    .trouble-area {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    
+    .trouble-area > .flex > div {
+        flex: 1 0 auto;
+        max-width: 100%;
+        padding: 25px 0 0 ;
+    }
+    
+    .trouble-area > .flex > div > .title {
+        top: 2%;
+    }
+    
+    .trouble-area > .flex > div > .desc {
+        position: inherit;
+        color: #fff;
+        padding: 25px;
+        width: 100%;
+        line-height: 2;
+        right: 0;
+        transition: none;
+    }
+    .trouble-area > .flex > div:hover > .desc {
+        right: 0;
+    }
+    .price-area > img {
+        width: 80%;
+    }
+    .reason-area .flex {
+        display: block;
+        top: 8%;
+    }
+    .reason-area h2 {
+        padding: 80px 0 2200px;
+    }
+    .reason-area .flex > div {
+        margin: 0 15px 35px;
+    }
+    .strengths-area {
+        padding: 100px 0px;
+    }
+    .strengths-area > .flex {
+        display: block;
+    }
+    .strengths-area > .flex > div:first-child h2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .strengths-area > .flex > div:first-child p {
+        width: 80%;
+        margin: 100px auto 0;
+    }
+    .strengths-area > .flex > div:nth-child(2) img {
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-top: 35px;
+    }
+    .step {
+        margin-top: 75px;
+        position: inherit;
+    }
+    .step > .flex {
+        display: block;
+    }
+    .celebrity-area {
+        padding: 50px 0 100px;
+    }
+    .celebrity-area > p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .celebrity-area > .provider img {
+        width: 75%;
+    }
+    footer > div img {
+        width: 30%;
+    }
+}
+@media screen and (max-width:430px){
+    .fv-area .logo {
+        width: 30%;
+    }
+    .concept-area .flex > div:nth-child(2) {
+        padding: 0 20px;
+    }
+    .concept-area .flex > div:nth-child(2) h2 {
+        font-size: 28px;
+    }
+    .price-area {
+        padding: 50px 15px;
+    }
+    .reason-area h2 span {
+        width: 80%;
+        margin: 0 auto 10px;
+    }
+    .reason-area .flex {
+        top: 8%;
+    }
+    .reason-area .flex > div {
+        margin: 0 0px 35px;
+    }
+    .reason-area h2 {
+        padding: 50px 0 1875px;
+    }
+    .strengths-area {
+        padding: 50px 15px;
+    }
+    .strengths-area > .flex > div:first-child h2 {
+        width: 100%;
+    }
+    .strengths-area > .flex > div:first-child p {
+        width: 100%;
+    }
+    .strengths-area > .flex > div:nth-child(2) img {
+        width: 90%;
+    }
+    .step {
+        width: 100%;
+    }
+    .celebrity-area > h2 span {
+        margin-bottom: 30px;
+    }
+    .celebrity-area > h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    .celebrity-area > .provider {
+        margin-top: 50px;
+    }
+    .celebrity-area > .provider h3 {
+        margin-bottom: 50px;
+    }
+    .celebrity-area > .provider img {
+        width: 90%;
+    }
+    .celebrity-area {
+        padding: 50px 0;
+    }
+    
+}
