@@ -64,18 +64,24 @@ $(function () {
       index,
       element
     ) {
-      gsap.set(element, { opacity: 0, x: "100%" });
+      var initialProperties =
+        $(window).width() <= 768
+          ? { opacity: 0, y: "100%" } // スマホの場合は下から
+          : { opacity: 0, x: "100%" }; // PCの場合は右から
+      gsap.set(element, initialProperties);
     });
 
     $(window).on("scroll", function () {
-      var offset, duration;
+      var offset, duration, animationProperties;
 
       if ($(window).width() <= 768) {
         offset = -100;
         duration = 0.5;
+        animationProperties = { opacity: 1, y: "0%" }; // スマホの場合は下から
       } else {
         offset = 200;
         duration = 1;
+        animationProperties = { opacity: 1, x: "0%" }; // PCの場合は右から
       }
 
       $(".strengths-area > .flex > div:nth-child(2) img").each(function (
@@ -88,9 +94,8 @@ $(function () {
         if (elementTop < viewportBottom && !$(element).hasClass("animated")) {
           gsap.to(element, {
             duration: duration,
-            opacity: 1,
-            x: "0%",
             ease: "power4.out",
+            ...animationProperties,
           });
           $(element).addClass("animated");
         }
