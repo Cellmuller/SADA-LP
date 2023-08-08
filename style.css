@@ -404,6 +404,38 @@
     width: 60%;
     margin: 0 auto;
 }
+/* fixed-area */
+.fixed-area{
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 35px;
+    position:sticky; /* 追加 */
+    bottom: 0;       /* 追加 */
+    left: 0;         /* ウィンドウの左端に寄せる場合 */
+    right: 0;        /* ウィンドウの右端に寄せる場合 */
+    z-index: 1000;   /* 必要に応じて他の要素より前に表示 */
+}
+
+.fixed-area a{
+    background-color: #256FA7;
+    text-decoration: none;
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all .2s;
+    border: 2px solid #256FA7;
+}
+.fixed-area a:hover{
+    opacity: 0.8;
+}
+.fixed-area a img{
+    display: inline-block;
+    width: 1.5%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
 /* footer */
 footer > div{
     background-color: #E4E4E3;
