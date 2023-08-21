@@ -76,6 +76,7 @@ body{
     font-size: 18px;
     font-weight: bold;
     width: 50%;
+    min-width: 380px;
 }
 .concept-img-2{
     position: absolute;
@@ -84,6 +85,7 @@ body{
     width: 15%;
     opacity: 0;
     transform: translateX(100px);
+    z-index: -1;
 }
 .concept-img-3{
     position: absolute;
@@ -92,6 +94,7 @@ body{
     width: 20%;
     opacity: 0;
     transform: translateX(100px);
+    z-index: -1;
 }
 /* trouble-area */
 .trouble-area > .flex{
@@ -530,6 +533,7 @@ footer > small{
         font-size: 16px;
         font-weight: bold;
         width: 100%;
+        min-width: auto;
     }
     
     .concept-img-2 {
