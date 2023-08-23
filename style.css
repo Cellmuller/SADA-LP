@@ -420,18 +420,21 @@ body{
     display: inline-block;
     font-size: 18px;
 }
-
-
-
-.celebrity-area > .provider .provider-img{
-    display: block;
-    width: 60%;
+.celebrity-area > .provider ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
     margin: 0 auto;
 }
-.celebrity-area > .provider .provider-img-sp{
-    display: none;
-    width: 60%;
-    margin: 0 auto;
+.celebrity-area > .provider ul li{
+    flex: calc(100%/6);
+}
+.celebrity-area > .provider ul li img{
+    display: block;
+    width: 100%;
 }
 /* fixed-area */
 .fixed-area{
